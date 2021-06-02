@@ -9,8 +9,8 @@ new_data = {(data_row["month"], data_row["day"]): data_row for (index, data_row)
 
 today_date = (date.month, date.day)
 
-my_email = "shuvratcp@gmail.com"
-my_password = "iamacool"
+my_email = "" #your email
+my_password = "" #your password
 
 random_latter_path = f"letter_templates/letter_{randint(1, 3)}.txt"
 
@@ -30,5 +30,5 @@ if today_date in new_data:
             email.sendmail(from_addr=my_email, to_addrs=birthday_boy_email,
                         msg=f"Subject:Happy Birthday {birthday_boy_name}\n\n{new_latter}")
         except UnicodeEncodeError:
-            print("hi")
+            print("Error")
 
